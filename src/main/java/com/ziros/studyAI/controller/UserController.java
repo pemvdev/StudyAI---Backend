@@ -14,21 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
     private UserService service;
-
-    @PostMapping("/register")
-    public ResponseEntity<String> register (@RequestBody @Valid RegisterRequest request){
-        try{
-            this.service.register(request);
-            return ResponseEntity.ok("Usuário cadastrado com sucesso!");
-        }catch (EmailAlreadyExistException e){
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
-    }
-
 
 }

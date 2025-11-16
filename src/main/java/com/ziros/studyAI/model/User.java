@@ -27,8 +27,4 @@ public class User {
         this.email = dto.email();
         this.password = dto.password();
     }
-
-
-
-
 }

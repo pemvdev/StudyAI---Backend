@@ -8,3 +8,5 @@ public record UserDTO (Long idUser, String name, String email, String password){
         this(user.getId(), user.getName(), user.getEmail(), user.getPassword());
     }
 }
+
+
